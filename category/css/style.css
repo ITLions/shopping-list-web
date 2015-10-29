@@ -1,0 +1,30 @@
+* {
+	padding: 0; 
+	margin: 0;
+}
+body, html {
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+}
+.form_container {
+	margin-top: 50px;
+	border: 1px solid #000;
+	border-radius: 10px;
+}
+.form_container form {
+	text-align: center;
+}
+.form_container form label, .form_container form input[type="text"], .form_container form textarea {
+	display: block;
+	margin: 10px auto;
+	padding: 10px;
+}
+.form_container input[type="submit"] {
+	margin: 10px 0 20px 0;
+	border: 1px solid #000;
+	border-radius: 5px;
+	background-color: none;
+	text-align: center;
+	padding: 5px 10px;
+}

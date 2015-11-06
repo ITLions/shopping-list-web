@@ -1,3 +1,36 @@
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Update category</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" >
+</head>
+<body>
+	<div class="menu">
+			<ul>
+				<li>
+					<a href="add-category.php">Add/edit category</a>
+				</li>
+				<li>
+					<a href="add-product.php">Add/edit product</a>
+				</li>
+				<li>
+					<a href="add-unit.php">Add/edit unit</a>
+				</li>
+				<li>
+					<a href="category-list.php">Category list</a>
+				</li>
+				<li>
+					<a href="product-list.php">Product list</a>
+				</li>
+				<li>
+					<a href="unit-list.php">Unit list</a>
+				</li>
+			</ul>
+		</div>
+</body>
+</html>
 <?php
 $categoryId = $_POST["category-id"];
 $url = 'https://pure-reaches-2979.herokuapp.com/api/v1/categories/'.$categoryId.'/update';

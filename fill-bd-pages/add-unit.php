@@ -4,7 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Add/edit category</title>
+	<title>Add/edit unit</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css" >
 </head>
 <body>
@@ -37,16 +37,16 @@
 			<div class="border_left_block">
 				<div class="padding_block">
 					<p>
-						Edit category
+						Edit unit
 					</p>
 					<div class="input_position">
-						<form id="edit-category" method="POST" action="update-category.php">
-							<select name="category-id" style="margin-top:10px">
-								<option value="1">Select Category</option>
+						<form id="edit-unit" method="POST" action="update-unit.php">
+							<select name="unit-id" style="margin-top:10px">
+								<option value="1">Select Unit</option>
 								<?php 
 							 	//Get list of categories
 
-								$jsonurl = "https://pure-reaches-2979.herokuapp.com/api/v1/categories?offset=0&limit=100";
+								$jsonurl = "https://pure-reaches-2979.herokuapp.com/api/v1/units?offset=0&limit=100";
 								$json = file_get_contents($jsonurl);
 								$json = utf8_encode($json); 
 								$response = json_decode($json, true);
@@ -62,8 +62,6 @@
 								?>
 							</select>
 							<input  type="text" placeholder="name" name="name">
-							<input  type="text" placeholder="description" name="description">
-							<input  type="text" placeholder="icon url" name="image">
 							<button class="botton_submit" >Submit</button>
 						</form>
 					</div>
@@ -74,13 +72,11 @@
 			<div class="border_left_block">
 				<div class="padding_block">
 					<p>
-						Add category 
+						Add unit 
 					</p>
 					<div class="input_position">
-						<form id="add-category" method="POST" action="post-category.php">
+						<form id="add-unit" method="POST" action="post-unit.php">
 							<input  type="text" placeholder="name" name="name">
-							<input  type="text" placeholder="discription" name="description">
-							<input  type="text" placeholder="icon url" name="image">
 							<button class="botton_submit" >Submit</button>
 						</form>
 					</div>

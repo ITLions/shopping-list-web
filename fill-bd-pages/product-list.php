@@ -18,10 +18,16 @@
 					<a href="add-product.php">Add/edit product</a>
 				</li>
 				<li>
+					<a href="add-unit.php">Add/edit unit</a>
+				</li>
+				<li>
 					<a href="category-list.php">Category list</a>
 				</li>
 				<li>
 					<a href="product-list.php">Product list</a>
+				</li>
+				<li>
+					<a href="unit-list.php">Unit list</a>
 				</li>
 			</ul>
 		</div>
@@ -56,7 +62,7 @@
 				echo '<td>'. $item["id"] .'</td>';
 				echo '<td>'. $item["name"] .'</td>';
 				echo '<td>'. $item["description"] .'</td>';
-				echo '<td>'. $item["categorId"] .'</td>';
+				echo '<td>'. $item["categoryId"] .'</td>';
 				echo '<td>'. $item["unitId"] .'</td>';
 				echo '<td>'. $item["image"] .'</td>';
 				echo '</tr>';

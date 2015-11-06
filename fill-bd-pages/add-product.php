@@ -18,10 +18,16 @@
 					<a href="add-product.php">Add/edit product</a>
 				</li>
 				<li>
+					<a href="add-unit.php">Add/edit unit</a>
+				</li>
+				<li>
 					<a href="category-list.php">Category list</a>
 				</li>
 				<li>
 					<a href="product-list.php">Product list</a>
+				</li>
+				<li>
+					<a href="unit-list.php">Unit list</a>
 				</li>
 			</ul>
 		</div>
@@ -53,8 +59,8 @@
 						Edit product
 					</p>
 					<div class="input_position">
-						<form id="product" method="POST" action="post-product.php">
-						<select name="category-id" style="margin-top:10px">
+						<form id="product" method="POST" action="update-product.php">
+						<select name="product-id" style="margin-top:10px">
 								<option value="1">Select product</option>
 								<?php 
 							 	//Get list of categories
@@ -123,6 +129,42 @@
 					</table>
 				</div>
 			</div>
+			<div class="border_left_block">
+				<div class="padding_block">
+					<p>
+						List of units
+					</p>
+					<table  border="1" width="100%" cellpadding="15">
+			<tr>
+				<th>№</th>
+				<th>unit ID</th>
+				<th>unit Name</th>
+			</tr>
+			<?php 
+							 //Get list of categories
+
+			$jsonurl = "https://pure-reaches-2979.herokuapp.com/api/v1/units?offset=0&limit=100";
+			$json = file_get_contents($jsonurl);
+			$json = utf8_encode($json); 
+			$response = json_decode($json, true);
+			$message = $response["content"];
+			$items = $message["items"];
+			$rows = $message["totalSize"];
+			$cols = 3; 
+			for ($tr=0; $tr<=$rows-1; $tr++){ 
+				echo '<tr class="border_bottom">';
+				$item = $items[$tr];
+				$number = $tr+1;
+				echo '<td>'. $number .'</td>';
+				echo '<td>'. $item["id"] .'</td>';
+				echo '<td>'. $item["name"] .'</td>';
+				echo '</tr>';
+			}
+			?>
+		</table>
+				</div>
+			</div>
+
 		</section>
 
 	</main>

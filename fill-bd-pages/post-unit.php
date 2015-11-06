@@ -3,7 +3,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Post category</title>
+	<title>Post unit</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css" >
 </head>
 <body>
@@ -33,8 +33,8 @@
 </html>
 <?php
 echo "<br>";
-$url = 'https://pure-reaches-2979.herokuapp.com/api/v1/categories/new';
-$bodyArray = array('name' => $_POST['name'], 'description' => $_POST['description'], 'image' => $_POST['image']);
+$url = 'https://pure-reaches-2979.herokuapp.com/api/v1/units/new';
+$bodyArray = array('name' => $_POST['name']);
 $data = json_encode($bodyArray);
 # Create a connection
 $ch = curl_init($url);

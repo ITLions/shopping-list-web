@@ -41,11 +41,11 @@
 					</p>
 					<div class="input_position">
 						<form id="product" method="POST" action="post-product.php">
-							<input  type="text" placeholder="name" name="name">
+							<input  type="text" placeholder="name" name="name" required>
 							<input  type="text" placeholder="description" name="description">
-							<input  type="text" placeholder="category id" name="category-id">
-							<input  type="text" placeholder="icon url" name="icon-url">
-							<input  type="text" placeholder="unit id" name="unit-id"> 
+							<input  type="text" placeholder="category id" name="category-id" required>
+							<input  type="text" placeholder="icon url" name="icon-url" required>
+							<input  type="text" placeholder="unit id" name="unit-id" required> 
 							<button class="botton_submit" >Submit</button>
 						</form>
 					</div>
@@ -60,7 +60,7 @@
 					</p>
 					<div class="input_position">
 						<form id="product" method="POST" action="update-product.php">
-						<select name="product-id" style="margin-top:10px">
+						<select name="product-id" style="margin-top:10px" required>
 								<option value="1">Select product</option>
 								<?php 
 							 	//Get list of categories
@@ -80,11 +80,11 @@
 								}
 								?>
 							</select>
-							<input  type="text" placeholder="name" name="name">
+							<input  type="text" placeholder="name" name="name" required>
 							<input  type="text" placeholder="description" name="description">
-							<input  type="text" placeholder="category id" name="category-id">
-							<input  type="text" placeholder="icon url" name="icon-url">
-							<input  type="text" placeholder="unit id" name="unit-id"> 
+							<input  type="text" placeholder="category id" name="category-id" required>
+							<input  type="text" placeholder="icon url" name="icon-url" required>
+							<input  type="text" placeholder="unit id" name="unit-id" required> 
 							<button class="botton_submit" >Submit</button>
 						</form>
 					</div>

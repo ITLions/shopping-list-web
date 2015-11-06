@@ -41,7 +41,7 @@
 					</p>
 					<div class="input_position">
 						<form id="edit-category" method="POST" action="update-category.php">
-							<select name="category-id" style="margin-top:10px">
+							<select name="category-id" style="margin-top:10px" required>
 								<option value="1">Select Category</option>
 								<?php 
 							 	//Get list of categories
@@ -61,9 +61,9 @@
 								}
 								?>
 							</select>
-							<input  type="text" placeholder="name" name="name">
+							<input  type="text" placeholder="name" name="name" required>
 							<input  type="text" placeholder="description" name="description">
-							<input  type="text" placeholder="icon url" name="image">
+							<input  type="text" placeholder="icon url" name="image" required>
 							<button class="botton_submit" >Submit</button>
 						</form>
 					</div>
@@ -78,9 +78,9 @@
 					</p>
 					<div class="input_position">
 						<form id="add-category" method="POST" action="post-category.php">
-							<input  type="text" placeholder="name" name="name">
-							<input  type="text" placeholder="discription" name="description">
-							<input  type="text" placeholder="icon url" name="image">
+							<input  type="text" placeholder="name" name="name" required>
+							<input  type="text" placeholder="description" name="description">
+							<input  type="text" placeholder="icon url" name="image" required>
 							<button class="botton_submit" >Submit</button>
 						</form>
 					</div>

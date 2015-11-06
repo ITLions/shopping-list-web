@@ -41,7 +41,7 @@
 					</p>
 					<div class="input_position">
 						<form id="edit-unit" method="POST" action="update-unit.php">
-							<select name="unit-id" style="margin-top:10px">
+							<select name="unit-id" style="margin-top:10px" required>
 								<option value="1">Select Unit</option>
 								<?php 
 							 	//Get list of categories
@@ -61,7 +61,7 @@
 								}
 								?>
 							</select>
-							<input  type="text" placeholder="name" name="name">
+							<input  type="text" placeholder="name" name="name" required>
 							<button class="botton_submit" >Submit</button>
 						</form>
 					</div>
@@ -76,7 +76,7 @@
 					</p>
 					<div class="input_position">
 						<form id="add-unit" method="POST" action="post-unit.php">
-							<input  type="text" placeholder="name" name="name">
+							<input  type="text" placeholder="name" name="name" required>
 							<button class="botton_submit" >Submit</button>
 						</form>
 					</div>

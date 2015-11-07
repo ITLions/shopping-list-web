@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Add/edit category</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css" >
@@ -48,7 +47,6 @@
 
 								$jsonurl = "https://pure-reaches-2979.herokuapp.com/api/v1/categories?offset=0&limit=100";
 								$json = file_get_contents($jsonurl);
-								$json = utf8_encode($json); 
 								$response = json_decode($json, true);
 								$message = $response["content"];
 								$items = $message["items"];

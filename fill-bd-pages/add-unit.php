@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Add/edit unit</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css" >
@@ -45,10 +44,8 @@
 								<option value="1">Select Unit</option>
 								<?php 
 							 	//Get list of categories
-
 								$jsonurl = "https://pure-reaches-2979.herokuapp.com/api/v1/units?offset=0&limit=100";
 								$json = file_get_contents($jsonurl);
-								$json = utf8_encode($json); 
 								$response = json_decode($json, true);
 								$message = $response["content"];
 								$items = $message["items"];
@@ -59,6 +56,7 @@
 									$number = $tr+1;
 									echo '<option value="'. $item["id"].'">'. $item["name"] .'</option>';
 								}
+								echo '<option value="аарк">кукушка</option>';
 								?>
 							</select>
 							<input  type="text" placeholder="name" name="name" required>

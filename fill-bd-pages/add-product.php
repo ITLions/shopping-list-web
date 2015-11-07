@@ -142,7 +142,6 @@
 
 			$jsonurl = "https://pure-reaches-2979.herokuapp.com/api/v1/units?offset=0&limit=100";
 			$json = file_get_contents($jsonurl);
-			$json = utf8_encode($json); 
 			$response = json_decode($json, true);
 			$message = $response["content"];
 			$items = $message["items"];
